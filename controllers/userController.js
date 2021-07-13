@@ -6,7 +6,30 @@ const usersGet = (req,res=response)=>{
     })
 }
 
-
+const userGet = (req, res) =>{
+    res.json({
+        msg:'User get'
+    })
+}
+const userCreate = (req, res) =>{
+    res.json({
+        msg:'User create '
+    })
+}
+const userUpdate = (req, res) =>{
+    res.json({
+        msg:'User update'
+    })
+}
+const userDelete = (req, res) =>{
+    res.json({
+        msg:'User delete '
+    })
+}
 module.exports={
-    usersGet
+    usersGet,
+    userGet,
+    userCreate,
+    userUpdate,
+    userDelete,
 }
