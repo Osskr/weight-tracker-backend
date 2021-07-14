@@ -36,35 +36,43 @@ const UserSchema = Schema({
     },
 
     profile_pic:{
-        type: String
+        type: String,
+        default:'url-pic'
     },
 
     height:{
-        type:Number
+        type:Number,
+        default:175
     },
 
     age:{
-        type:Number
+        type:Number,
+        default:20
     },
     
     activity:{
-        type:String
+        type:String,
+        default:'NORMAL'
     },
 
     weight_goal:{
-        type: Number
+        type: Number,
+        default:0
     },
 
     actual_weight:{
-        type: Number
+        type: Number,
+        default:0
     },
 
     rol:{
-        type:String
+        type:String,
+        default:'USER_ROLE'
     },
 
     status:{
-        type:Boolean
+        type:Boolean,
+        default:true
     },
 
     google:{

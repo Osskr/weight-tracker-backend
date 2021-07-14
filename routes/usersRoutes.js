@@ -1,10 +1,11 @@
 const {Router} = require('express')
-
+const {check} = require('express-validator')
 const {usersGet,
     userGet,
     userCreate,
     userUpdate,
     userDelete} = require('../controllers/userController')
+const { validateFields } = require('../middlewares/validateFields')
 
 const router = Router()
 
@@ -15,7 +16,11 @@ router.get('/', usersGet)
 router.get('/:id', userGet)
 
 //crear un usuario
-router.post('/',userCreate)
+router.post('/',[
+    check('name', 'Name is required').not().isEmpty(),
+    check('password','password must have at least 6 characters ').isLength({min:6}),
+    validateFields
+],userCreate)
 
 //modifica la informacion de un usuario 
 router.put('/:id', userUpdate)
