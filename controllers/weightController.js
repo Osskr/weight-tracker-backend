@@ -6,6 +6,25 @@ const weightGet = (req, res)=>{
     })
 }
 
+
+const newWeight = (req, res)=>{
+    res.json({
+        msg:'Weight'
+    })
+}
+const updateWeight = (req, res)=>{
+    res.json({
+        msg:'Weight'
+    })
+}
+const deleteWeight = (req, res)=>{
+    res.json({
+        msg:'Weight'
+    })
+}
 module.exports={
-    weightGet
+    weightGet,
+    newWeight,
+    updateWeight,
+    deleteWeight,
 }

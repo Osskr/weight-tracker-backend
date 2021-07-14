@@ -18,6 +18,7 @@ router.get('/:id', userGet)
 //crear un usuario
 router.post('/',[
     check('name', 'Name is required').not().isEmpty(),
+    check('email', 'Email is required').not().isEmpty(),
     check('password','password must have at least 6 characters ').isLength({min:6}),
     validateFields
 ],userCreate)
